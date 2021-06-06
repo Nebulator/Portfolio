@@ -14,7 +14,6 @@ class Section extends React.Component {
                     <img className="picture" src={this.props.image} alt="Content"/>
                 </div>
                 <div className="description">
-                    <h1>Left</h1>
                     <h3>{this.props.title}</h3>
                     <p>{this.props.description}</p>
                     {this.props.linkSrc &&
@@ -26,7 +25,6 @@ class Section extends React.Component {
             {(!this.props.left || !this.props.desktopView) &&
             <div className="sectionContainer">
                 <div className="description">
-                    <h1>Different</h1>
                     <h3>{this.props.title}</h3>
                     <p>{this.props.description}</p>
                     {this.props.linkSrc &&
