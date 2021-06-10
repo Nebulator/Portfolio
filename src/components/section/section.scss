@@ -1,12 +1,22 @@
-.sectionContainer{
-    padding: 24px 48px;
+.section-container{
+    padding: 24px 0;
     display: flex;
     justify-content:space-between;
 }
 
-.pictureContainer{
-    width: 48%;
+.section-container-mobile {
+    display:block;
+}
+
+.picture-container{
+    width: 47%;
     margin: auto 0;
+}
+
+.picture-container-mobile{
+    width: auto;
+    height: 48%;
+    margin: auto;
 }
 
 .picture {
@@ -15,9 +25,18 @@
     max-height: 300px;
 }
 .description {
-    width: 48%;
+    width: 47%;
     margin:auto 0;
     text-align: left;
+}
+
+.description p {
+    text-align: justify
+}
+
+.description-mobile {
+    width: 100%;
+    margin: 32px auto;
 }
 
 h3 {

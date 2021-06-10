@@ -2,47 +2,57 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './section.scss';
 
-class Section extends React.Component {
-  render () {
-      console.log("Desktop: " + this.props.desktopView);
+const Section = (props) => {
     return (
         <>
-        {console.log("Desktop: " + this.props.desktopView)}
-            {this.props.left && this.props.desktopView &&
-            <div className="sectionContainer">
-                <div className="pictureContainer">
-                    <img className="picture" src={this.props.image} alt="Content"/>
+            {props.left && props.desktopView &&
+                <div className="section-container">
+                    <div className="picture-container">
+                        <img className="picture" src={props.image} alt="Content"/>
+                    </div>
+                    <div className="description">
+                        <h3>{props.title}</h3>
+                        <p>{props.description}</p>
+                        {props.linkSrc &&
+                            <a className="btn-link" href={props.linkSrc} target="_blank" rel="noreferrer">{props.linkText}</a>
+                        }
+                    </div>
                 </div>
-                <div className="description">
-                    <h3>{this.props.title}</h3>
-                    <p>{this.props.description}</p>
-                    {this.props.linkSrc &&
-                        <a className="btn-link" href={this.props.linkSrc} target="_blank" rel="noreferrer">{this.props.linkText}</a>
-                    }
-                </div>
-            </div>
             }
-            {(!this.props.left || !this.props.desktopView) &&
-            <div className="sectionContainer">
-                <div className="description">
-                    <h3>{this.props.title}</h3>
-                    <p>{this.props.description}</p>
-                    {this.props.linkSrc &&
-                        <a className="btn-link" href={this.props.linkSrc} target="_blank" rel="noreferrer">{this.props.linkText}</a>
-                    }
+            {(!props.left && props.desktopView) &&
+                <div className="section-container">
+                    <div className="description">
+                        <h3>{props.title}</h3>
+                        <p>{props.description}</p>
+                        {props.linkSrc &&
+                            <a className="btn-link" href={props.linkSrc} target="_blank" rel="noreferrer">{props.linkText}</a>
+                        }
+                    </div>
+                    <div className="picture-container">
+                        <img className="picture" src={props.image} alt="Content"/>
+                    </div>
                 </div>
-                <div className="pictureContainer">
-                    <img className="picture" src={this.props.image} alt="Content"/>
+            }
+            {!props.desktopView &&
+                <div className="section-container-mobile">
+                    <div className="description description-mobile">
+                        <h3>{props.title}</h3>
+                        <p>{props.description}</p>
+                        {props.linkSrc &&
+                            <a className="btn-link" href={props.linkSrc} target="_blank" rel="noreferrer">{props.linkText}</a>
+                        }
+                    </div>
+                    <div className="picture-container picture-container-mobile">
+                        <img className="picture" src={props.image} alt="Content"/>
+                    </div>
                 </div>
-            </div>
             }
         </>
     )
-  }
 }
 
-const mapStateToProps = state => ({
-    desktopView: state.desktop.desktopView
-  });
+function mapStateToProps(state) {
+    return {desktopView: state.desktop.desktopView}
+  };
   
   export default connect(mapStateToProps)(Section);

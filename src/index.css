@@ -12,3 +12,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.btn-link {
+  font-size: 18px;
+  background-color: #0000FF;
+  padding: 6px 8px 8px 8px;
+  text-decoration: none;
+  border-radius: 8px;
+  border: solid black 1px;
+  box-shadow: 2px 2px 2px #000;
+  cursor: pointer;
+  color:white;
+  transition: background-color 0.25s;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+.btn-link:hover {
+  background-color: #000C66;
+}
+
+h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+p {
+  font-size: 16px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+label {
+  font-size: 18px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
