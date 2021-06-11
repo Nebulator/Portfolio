@@ -47,18 +47,3 @@ h3 {
     display:flex;
     margin: auto 0;
 }
-
-.btn-link {
-    background-color: #0000FF;
-    padding: 6px 8px 8px 8px;
-    text-decoration: none;
-    border-radius: 8px;
-    border: solid black 1px;
-    box-shadow: 2px 2px 2px #000;
-    cursor: pointer;
-    color:white;
-    transition: background-color 0.25s;
-}
-.btn-link:hover {
-    background-color: #000C66;
-}

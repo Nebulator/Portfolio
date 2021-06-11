@@ -1,18 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import emailjs from 'emailjs-com';
 import './contact.scss';
 
 export default function Contact() {
+    const [successPopup, setSuccessPopup] = useState(false);
+    const [failPopup, setFailPopup] = useState(false);
 
-  function sendMessage(e) {
-    e.preventDefault();
+    function close() {
+        setSuccessPopup(false);
+        setFailPopup(false);
+    }
 
-    emailjs.sendForm('service_rr51jxw', 'template_odt3j74', e.target, 'user_3I7FXBprpnHYBYo28VDOX')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    function sendMessage(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_rr51jxw', 'template_odt3j74', e.target, 'user_3I7FXBprpnHYBYo28VDOX')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
   }
 
   return (
@@ -38,15 +45,23 @@ export default function Contact() {
                 </table>
             <input className="btn-link submit-btn" type="submit" value="Send Message"/>
             </form>
-            <div className="overlay">
-                <div className="popup">
-                    <div className="popup-container">
-                        <p>Your message has been sent!</p>
-                        <p>There was a problem sending the message. Please email your message to naffymc@gmail.com and also include in your message that it could not be sent from this contact page.</p>
-                        <btn className="btn-link popup-btn" target="_blank" rel="noreferrer">Close</btn>
+            {(successPopup || failPopup) &&
+                <div className="overlay">
+                    <div className="popup">
+                        <div className="popup-container">
+                            {successPopup && 
+                                <p>Your message has been sent!</p>
+                            }
+                            {failPopup && 
+                                <p>There was a problem sending the message. Please email your message to naffymc@gmail.com and also include in your message that it could not be sent from this contact page.</p>
+                            }
+                            <div className="btn-container">
+                                <btn className="btn-link popup-btn" onClick={close}>Close</btn>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            }
         </>
   );
 }
