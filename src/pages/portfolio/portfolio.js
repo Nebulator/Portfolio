@@ -5,7 +5,7 @@ import GlitchGarden from "../../assets/images/Glitch Garden.png";
 import Camera from "../../assets/images/Camera Render.png";
 import Compiler from "../../assets/images/Compiler.png";
 import './portfolio.scss';
-//Can we pass an objects to the sections instead?
+//Can we pass objects to the sections instead
 const Portfolio = () => {
     return (
         <>

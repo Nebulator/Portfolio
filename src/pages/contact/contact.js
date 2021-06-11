@@ -38,6 +38,15 @@ export default function Contact() {
                 </table>
             <input className="btn-link submit-btn" type="submit" value="Send Message"/>
             </form>
+            <div className="overlay">
+                <div className="popup">
+                    <div className="popup-container">
+                        <p>Your message has been sent!</p>
+                        <p>There was a problem sending the message. Please email your message to naffymc@gmail.com and also include in your message that it could not be sent from this contact page.</p>
+                        <btn className="btn-link popup-btn" target="_blank" rel="noreferrer">Close</btn>
+                    </div>
+                </div>
+            </div>
         </>
   );
 }

@@ -37,3 +37,33 @@ td:nth-child(2)
 .submit-btn {
     float:left;
 }
+
+.overlay {
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.5);
+    position:fixed;
+    top: 0;
+    left: 0;
+    //background-color:red;
+    
+}
+
+.popup {
+    border-radius: 16px;
+    width: 80vw;
+    max-width: 600px;
+    background-color: white;
+    margin: 15% auto;
+}
+
+.popup-container {
+    padding: 16px;
+    text-align: left;
+}
+
+.popup-container p {
+    font-size: 24px;
+    margin: 0;
+}

@@ -16,7 +16,7 @@ code {
 .btn-link {
   font-size: 18px;
   background-color: #0000FF;
-  padding: 6px 8px 8px 8px;
+  padding: 6px 16px 8px 16px;
   text-decoration: none;
   border-radius: 8px;
   border: solid black 1px;
@@ -28,6 +28,10 @@ code {
 }
 .btn-link:hover {
   background-color: #000C66;
+}
+
+.popup-btn {
+  margin: 16px 0;
 }
 
 h1 {
