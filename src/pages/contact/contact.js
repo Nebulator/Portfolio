@@ -16,9 +16,9 @@ export default function Contact() {
 
         emailjs.sendForm('service_rr51jxw', 'template_odt3j74', e.target, 'user_3I7FXBprpnHYBYo28VDOX')
         .then((result) => {
-            console.log(result.text);
+            setSuccessPopup(true);
         }, (error) => {
-            console.log(error.text);
+            setFailPopup(true);
         });
   }
 
@@ -56,7 +56,7 @@ export default function Contact() {
                                 <p>There was a problem sending the message. Please email your message to naffymc@gmail.com and also include in your message that it could not be sent from this contact page.</p>
                             }
                             <div className="btn-container">
-                                <btn className="btn-link popup-btn" onClick={close}>Close</btn>
+                                <button className="btn-link popup-btn" onClick={close}>Close</button>
                             </div>
                         </div>
                     </div>
