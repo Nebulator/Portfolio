@@ -1,5 +1,5 @@
 import Section from '../../components/section/section'
-import Profile from "../../assets/images/Profile Picture.jpg";
+import Profile from "../../assets/images/Professional Profile Flipped.jpg";
 import './about.scss';
 
 function About() {

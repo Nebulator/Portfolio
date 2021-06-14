@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../../components/section/section';
-import Profile from "../../assets/images/Profile Picture.jpg";
+import Profile from "../../assets/images/Professional Profile Flipped.jpg";
 import GlitchGarden from "../../assets/images/Glitch Garden.png";
 import Camera from "../../assets/images/Camera Render.png";
 import Compiler from "../../assets/images/Compiler.png";
