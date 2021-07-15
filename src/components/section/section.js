@@ -12,6 +12,9 @@ const Section = (props) => {
                     </div>
                     <div className="description">
                         <h3>{props.title}</h3>
+                        {props.date != null &&
+                            <h4>{props.date}</h4>
+                        }
                         <p>{props.description}</p>
                         {props.linkSrc &&
                             <a className="btn-link" href={props.linkSrc} target="_blank" rel="noreferrer">{props.linkText}</a>
@@ -23,6 +26,9 @@ const Section = (props) => {
                 <div className="section-container">
                     <div className="description">
                         <h3>{props.title}</h3>
+                        {props.date != null &&
+                            <h4>{props.date}</h4>
+                        }
                         <p>{props.description}</p>
                         {props.linkSrc &&
                             <a className="btn-link" href={props.linkSrc} target="_blank" rel="noreferrer">{props.linkText}</a>
@@ -37,6 +43,9 @@ const Section = (props) => {
                 <div className="section-container-mobile">
                     <div className="description description-mobile">
                         <h3>{props.title}</h3>
+                        {props.date != null &&
+                            <h4>{props.date}</h4>
+                        }
                         <p>{props.description}</p>
                         {props.linkSrc &&
                             <a className="btn-link" href={props.linkSrc} target="_blank" rel="noreferrer">{props.linkText}</a>
